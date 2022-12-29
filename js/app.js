@@ -19,7 +19,6 @@ class CalorieTracker {
     this._meals.push(meal);
     this._totalCalories += meal.calories;
     Storage.updateTotalCalories(this._totalCalories);
-
     this._displayNewMeal(meal);
     this._render();
   }
@@ -28,7 +27,6 @@ class CalorieTracker {
     this._workouts.push(workout);
     this._totalCalories -= workout.calories;
     Storage.updateTotalCalories(this._totalCalories);
-
     this._displayNewWorkout(workout);
     this._render();
   }
@@ -39,6 +37,7 @@ class CalorieTracker {
     if (index !== -1) {
       const meal = this._meals[index];
       this._totalCalories -= meal.calories;
+      Storage.updateTotalCalories(this._totalCalories);
       this._meals.splice(index, 1);
       this._render();
     }
@@ -50,6 +49,8 @@ class CalorieTracker {
     if (index !== -1) {
       const workout = this._workouts[index];
       this._totalCalories += workout.calories;
+      Storage.updateTotalCalories(this._totalCalories);
+
       this._workouts.splice(index, 1);
       this._render();
     }
