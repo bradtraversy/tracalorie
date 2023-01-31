@@ -1,11 +1,29 @@
-# Tracalorie Project
+# Tracalorie
 
-This is a simple calorie counter app built with vanilla JavaScript. It tracks your meals and workouts and calculates the total calories burned and consumed.
+This is the Webpack version of the Tracalorie app from the Modern JS From the Beginning course. It is an app to track calories, meals and workouts.
 
-This is part of my Modern JavaScript From The Beginning 2.0 course.
+## Usage
 
-<img src="assets/screen.png">
+Install dependencies
 
-All of the code/classes are in the `app.js` file.
+```
+npm install
+```
 
-There is a version of this app built with Webpack and ES6 modules [here]('https://github.com/bradtraversy/tracalorie-webpack')
+Run the dev server
+
+```
+npm run dev
+```
+
+It will start on `http://localhost:3000`
+
+To build for production
+
+```
+npm run build
+```
+
+Your production files will be in the `dist` folder.
+
+You can view the hosted version of this app at https://spectacular-souffle-a6e5f4.netlify.app
